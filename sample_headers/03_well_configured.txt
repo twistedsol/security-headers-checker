@@ -1,0 +1,10 @@
+# url: https://app.example.test/
+# SAMPLE FILE. Made-up headers from a well configured site.
+HTTP/2 200
+Content-Type: text/html; charset=utf-8
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Set-Cookie: session=abc123; Path=/; Secure; HttpOnly; SameSite=Lax
