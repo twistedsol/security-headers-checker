@@ -93,7 +93,13 @@ python3 -m unittest -v
 
 This is part of a 30-day challenge to learn cloud security by building in public. It follows the [log detector](https://github.com/twistedsol/log-detector), the [misconfiguration scan](https://github.com/twistedsol/misconfig-scan), the [IAM policy checker](https://github.com/twistedsol/iam-policy-checker) and the [secrets scanner](https://github.com/twistedsol/secrets-scanner). I wrote the code together with Claude. No cloud account is needed.
 
-## Limits
+## What I learned
+
+- Not every finding can be fixed on every host. GitHub Pages does not let you set response headers, so my own site will always show a few.
+- A checker that reads headers cannot see a CSP set with a meta tag inside the HTML, so it can say "missing" when something is partly in place.
+- A good checker avoids false alarms. HSTS and the cookie Secure flag only matter on https, so I skip those checks on http pages.
+-
+- ## Limits
 
 - It reads headers from one page request. Other pages on the same site can send different headers.
 - It checks that a header exists and a few obvious weak values. It does not judge whether a full Content-Security-Policy is well designed.
