@@ -1,0 +1,6 @@
+# url: https://blog.example.test/
+# SAMPLE FILE. Made-up headers from a static host that only sets HSTS.
+HTTP/2 200
+Server: nginx
+Content-Type: text/html; charset=utf-8
+Strict-Transport-Security: max-age=31556952
